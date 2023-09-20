@@ -1,0 +1,8 @@
+# Ignore text files
+*.txt
+
+# Ignore directories
+results/
+Log/
+checkpoints/
+split_temp_dir/
