@@ -8,3 +8,9 @@ NOTE: sadly I did not go too much into model initialization in the video lecture
 ### License
 
 MIT
+
+CMDhistory
+
+numactl -C 64-127 python gpt_inf.py --device_type gpu --bs 36 --insid 0 --intrathread 64 --maxnewtoken 500 --model 10m --bs 64
+./intel_ipx_llama2_sweep.sh --model "150m" --newtoken [64]
+nvidia-smi dmon -s putc  // cmd to avoid H100 going into a hang

@@ -1,6 +1,7 @@
 import torch
 import argparse
 import time
+import os
 from gpt_language_model import GPTLanguageModel, decode
 
 # Config dictionary
@@ -45,6 +46,10 @@ parser.add_argument('--bs', type=int, default=1, help='Batch size for inference'
 parser.add_argument('--maxnewtoken', type=int, default=500, help='Maximum new tokens to generate')
 parser.add_argument('--num_iter', type=int, default=1, help='Number of iterations for inference timing')
 parser.add_argument("--device_type", type=str, choices=['cpu', 'gpu'], required=True, help="Device type for running the model")
+parser.add_argument("--ipex", action="store_true")
+parser.add_argument("--prof", action="store_true")
+parser.add_argument("--insid", default=100, type=int, help="Instance-ID")
+parser.add_argument("--intrathread", default=64, type=int, help="Number of threads running Inference")
 args = parser.parse_args()
 
 if args.device_type == "gpu" and torch.cuda.is_available():
@@ -55,8 +60,11 @@ else:
 config = model_configs[args.model]
 model = GPTLanguageModel(vocab_size, config['n_embd'], config['n_head'], config['n_layer'], block_size, dropout).to(device)
 
+os.environ["OMP_NUM_THREADS"] = str(args.intrathread)
+torch.set_num_threads(args.intrathread)
 #below way of loading loaded unnecessary keys.. and gave me error for inference:TBD
 #model.load_state_dict(torch.load(config["checkpoint_path"]))
+
 
 checkpoint = torch.load(config["checkpoint_path"])
 model.load_state_dict(checkpoint["model_state_dict"])
@@ -69,6 +77,6 @@ for _ in range(args.num_iter):
     print(decode(model.generate(context, args.maxnewtoken, block_size)[0].tolist()))
 
 end_time = time.time()
-
+print("inftime=%s  BS=%s ins=%s token=%s\n" %((end_time - start_time), args.bs, args.insid, args.maxnewtoken))
 print(f"Time taken for {args.num_iter} inferences: {end_time - start_time:.2f} seconds")
 

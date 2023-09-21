@@ -12,7 +12,7 @@ declare -A ins_values=(["64"]=2)
 #ins_values=(4 8)
 #bs_values=(64)
 #bs_values=(1 16 32 64 128 256)
-bs_values=(36)
+bs_values=(1)
 rm -f tmp_util
 #declare -a pids
 i=0  #track odd instnaces 
@@ -132,11 +132,10 @@ for token in "${TOKENS[@]}" ; do
 		else
 			echo "Default case."
 			#cmd="OMP_NUM_THREADS=$intrathread numactl -C ${s}-${e}  python run_generation.py --insid $ins --benchmark -m  meta-llama/Llama-2-${model}-hf --dtype bfloat16 --num-iter 1 --batch-size $bs --input-tokens 612  --max_new_tokens $token"
-			#cmd="numactl -C ${s}-${e} python gpt_inf.py --device $device_type  --batchsize $bs --insid $ins --threads $intrathread --maxtokens $token --model ${model}"
+			cmd="numactl -C ${s}-${e} python gpt_inf.py --device_type $device_type  --bs $bs --insid $ins --intrathread $intrathread --maxnewtoken $token --model ${model}"
 			#cmd="numactl -C ${s}-${e} python3 run_textgen.py --insid $ins  --ckpt_dir llama-2-7b --tokenizer_path tokenizer.model --max_seq_len $token --max_batch_size $bs --device $device_type --promptfile prompt.txt --intrathread $intrathread"
-			#cmd="numactl -C ${s}-${e} python3 run_textgen.py --insid $ins  --ckpt_dir llama-2-${model} --tokenizer_path tokenizer.model --max_gen_len $token --max_batch_size $bs --device $device_type --promptfile prompt.txt --intrathread $intrathread"
 			#cmd="numactl -C ${s}-${e} python3 run_textgen.py --insid $ins --model_type ${model} --ckpt_dir llama-2-${model} --tokenizer_path tokenizer.model --max_gen_len $token --max_batch_size $bs --device $device_type --promptfile prompt.txt --intrathread $intrathread"
-			cmd="numactl -C ${s}-${e} python3 run_textgen.py --insid $ins  --ckpt_dir llama-2-${model} --tokenizer_path tokenizer.model --max_gen_len $token --max_batch_size $bs --device $device_type --promptfile prompt.txt --intrathread $intrathread"
+			#cmd="numactl -C ${s}-${e} python3 run_textgen.py --insid $ins  --ckpt_dir llama-2-${model} --tokenizer_path tokenizer.model --max_gen_len $token --max_batch_size $bs --device $device_type --promptfile prompt.txt --intrathread $intrathread"
 		fi
 
 
@@ -227,11 +226,11 @@ for token in "${TOKENS[@]}" ; do
 
       if [ "$device_type" = "cpu" ]; then
 	      inscnt=$(( ins+1 ))
-	      echo "$maverage,$mmax_value,$model,$intrathread,$device_type,$inscnt,$bs,$res" >> cpulog_${TAG}
+	      echo "$maverage,$mmax_value,$model,$intrathread,$device_type,$inscnt,$bs,$res" >> cpulog_${TAG}.txt
       else
 	      inscnt=$(( ins+1 ))
-	      echo "$maverage,$mmax_value,$model,$intrathread,$device_type,$inscnt,$bs,$res" >> gpulog_${TAG}
-	      echo "$model,$intrathread,$device_type,$inscnt,$bs,$gpuutilavg,$gpuutilmax,$memutilavg,$memutilmax,$res" >> gpuutil_${TAG}
+	      echo "$maverage,$mmax_value,$model,$intrathread,$device_type,$inscnt,$bs,$res" >> gpulog_${TAG}.txt
+	      echo "$model,$intrathread,$device_type,$inscnt,$bs,$gpuutilavg,$gpuutilmax,$memutilavg,$memutilmax,$res" >> gpuutil_${TAG}.txt
       fi
       #Using -u immediatey writes stdout to file
 

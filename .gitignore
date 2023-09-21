@@ -6,3 +6,4 @@ results/
 Log/
 checkpoints/
 split_temp_dir/
+tmp_util
