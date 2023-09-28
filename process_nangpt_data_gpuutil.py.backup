@@ -3,26 +3,22 @@ import argparse
 import pandas as pd
 
 def process_line(line, printraw):
-    #print(line)
+    print(line)
     parts = [part for part in line.strip().split(',') if part]
-    parts = parts[:-1]
-    #print(parts)
-    common_elements = parts[:7]
+    common_elements = parts[:9]
 
-    first_instance = parts[7] if len(parts) > 7 else {}
+    first_instance = parts[9]
     #print(first_instance)
-    token_value = extract_value(first_instance, 'token') if 'token' in first_instance else -1
-    bs_value = extract_value(first_instance, 'BS') if 'BS' in first_instance else -1
-    sigmem = extract_value(first_instance, 'sigmem') if 'sigmem' in first_instance else -1
-    totmem = extract_value(first_instance, 'totmem') if 'totmem' in first_instance else -1
-# below only parsing the parts which has inftime as key.. So the tag is not picked to do .. so the line part != "new" does not matter.
-    inftime_values = [extract_value(part, 'inftime') for part in parts[7:] if 'inftime' in part]
-    avg_inftime = sum(float(val) for val in inftime_values) / len(inftime_values) if inftime_values else -1
-    print(parts)
-    tok_lat = (avg_inftime / (int(token_value) * int(bs_value))) * 1000
-    QPS = (int(token_value) * int(parts[5]) * int(bs_value)) / avg_inftime
+    token_value = extract_value(first_instance, 'token')
+    bs_value = extract_value(first_instance, 'BS')
 
-    result = common_elements + [token_value] + [str(avg_inftime)] + [str(tok_lat), str(QPS), str(sigmem), str(totmem)]
+    inftime_values = [extract_value(part, 'inftime') for part in parts[9:] if 'inftime' in part]
+    avg_inftime = sum(float(val) for val in inftime_values) / len(inftime_values) if inftime_values else 0
+
+    tok_lat = (avg_inftime / (int(token_value) * int(bs_value))) * 1000
+    QPS = (int(token_value) * int(parts[3]) * int(bs_value)) / avg_inftime
+
+    result = common_elements + [token_value] + [str(avg_inftime)] + [str(tok_lat), str(QPS)]
     
     if printraw:
         result.extend(inftime_values)
@@ -31,6 +27,7 @@ def process_line(line, printraw):
 
 def extract_value(instance, key):
     for item in instance.split():
+        print(item)
         k, v = item.split('=')
         if k == key:
             return v
@@ -38,7 +35,8 @@ def extract_value(instance, key):
 
 def main(inputfile, printraw, group_by_cols, filters):
 
-    columns = ["memavg", "memmax", "model", "intrathread", "device", "instanceCnt", "BS", "Tokens", "Avg_lat", "tok_lat", "Throughput", "sigmemFP", "totmemFP"]
+    #columns = ["memavg", "memmax", "model", "intrathread", "device", "instanceCnt", "BS", "Tokens", "Avg_lat", "tok_lat", "Throughput"]
+    columns = ["model", "intrathread", "device", "instanceCnt", "BS", "gpuavg", "gpumax", "memavg", "memmax","Tokens", "Avg_lat", "tok_lat", "Throughput"]
     df_list = []
 
     with open(inputfile, 'r') as f:

@@ -1,0 +1,649 @@
+Executing non Ipex path
+
+print model state dict sizes #############################################################
+
+
+Model State Dict Size =0.019256591796875MB
+
+Keys in model_state_dict:
+token_embedding_table.weight
+position_embedding_table.weight
+blocks.0.sa.heads.0.tril
+blocks.0.sa.heads.0.key.weight
+blocks.0.sa.heads.0.query.weight
+blocks.0.sa.heads.0.value.weight
+blocks.0.sa.heads.1.tril
+blocks.0.sa.heads.1.key.weight
+blocks.0.sa.heads.1.query.weight
+blocks.0.sa.heads.1.value.weight
+blocks.0.sa.heads.2.tril
+blocks.0.sa.heads.2.key.weight
+blocks.0.sa.heads.2.query.weight
+blocks.0.sa.heads.2.value.weight
+blocks.0.sa.heads.3.tril
+blocks.0.sa.heads.3.key.weight
+blocks.0.sa.heads.3.query.weight
+blocks.0.sa.heads.3.value.weight
+blocks.0.sa.heads.4.tril
+blocks.0.sa.heads.4.key.weight
+blocks.0.sa.heads.4.query.weight
+blocks.0.sa.heads.4.value.weight
+blocks.0.sa.heads.5.tril
+blocks.0.sa.heads.5.key.weight
+blocks.0.sa.heads.5.query.weight
+blocks.0.sa.heads.5.value.weight
+blocks.0.sa.proj.weight
+blocks.0.sa.proj.bias
+blocks.0.ffwd.net.0.weight
+blocks.0.ffwd.net.0.bias
+blocks.0.ffwd.net.2.weight
+blocks.0.ffwd.net.2.bias
+blocks.0.ln1.weight
+blocks.0.ln1.bias
+blocks.0.ln2.weight
+blocks.0.ln2.bias
+blocks.1.sa.heads.0.tril
+blocks.1.sa.heads.0.key.weight
+blocks.1.sa.heads.0.query.weight
+blocks.1.sa.heads.0.value.weight
+blocks.1.sa.heads.1.tril
+blocks.1.sa.heads.1.key.weight
+blocks.1.sa.heads.1.query.weight
+blocks.1.sa.heads.1.value.weight
+blocks.1.sa.heads.2.tril
+blocks.1.sa.heads.2.key.weight
+blocks.1.sa.heads.2.query.weight
+blocks.1.sa.heads.2.value.weight
+blocks.1.sa.heads.3.tril
+blocks.1.sa.heads.3.key.weight
+blocks.1.sa.heads.3.query.weight
+blocks.1.sa.heads.3.value.weight
+blocks.1.sa.heads.4.tril
+blocks.1.sa.heads.4.key.weight
+blocks.1.sa.heads.4.query.weight
+blocks.1.sa.heads.4.value.weight
+blocks.1.sa.heads.5.tril
+blocks.1.sa.heads.5.key.weight
+blocks.1.sa.heads.5.query.weight
+blocks.1.sa.heads.5.value.weight
+blocks.1.sa.proj.weight
+blocks.1.sa.proj.bias
+blocks.1.ffwd.net.0.weight
+blocks.1.ffwd.net.0.bias
+blocks.1.ffwd.net.2.weight
+blocks.1.ffwd.net.2.bias
+blocks.1.ln1.weight
+blocks.1.ln1.bias
+blocks.1.ln2.weight
+blocks.1.ln2.bias
+blocks.2.sa.heads.0.tril
+blocks.2.sa.heads.0.key.weight
+blocks.2.sa.heads.0.query.weight
+blocks.2.sa.heads.0.value.weight
+blocks.2.sa.heads.1.tril
+blocks.2.sa.heads.1.key.weight
+blocks.2.sa.heads.1.query.weight
+blocks.2.sa.heads.1.value.weight
+blocks.2.sa.heads.2.tril
+blocks.2.sa.heads.2.key.weight
+blocks.2.sa.heads.2.query.weight
+blocks.2.sa.heads.2.value.weight
+blocks.2.sa.heads.3.tril
+blocks.2.sa.heads.3.key.weight
+blocks.2.sa.heads.3.query.weight
+blocks.2.sa.heads.3.value.weight
+blocks.2.sa.heads.4.tril
+blocks.2.sa.heads.4.key.weight
+blocks.2.sa.heads.4.query.weight
+blocks.2.sa.heads.4.value.weight
+blocks.2.sa.heads.5.tril
+blocks.2.sa.heads.5.key.weight
+blocks.2.sa.heads.5.query.weight
+blocks.2.sa.heads.5.value.weight
+blocks.2.sa.proj.weight
+blocks.2.sa.proj.bias
+blocks.2.ffwd.net.0.weight
+blocks.2.ffwd.net.0.bias
+blocks.2.ffwd.net.2.weight
+blocks.2.ffwd.net.2.bias
+blocks.2.ln1.weight
+blocks.2.ln1.bias
+blocks.2.ln2.weight
+blocks.2.ln2.bias
+blocks.3.sa.heads.0.tril
+blocks.3.sa.heads.0.key.weight
+blocks.3.sa.heads.0.query.weight
+blocks.3.sa.heads.0.value.weight
+blocks.3.sa.heads.1.tril
+blocks.3.sa.heads.1.key.weight
+blocks.3.sa.heads.1.query.weight
+blocks.3.sa.heads.1.value.weight
+blocks.3.sa.heads.2.tril
+blocks.3.sa.heads.2.key.weight
+blocks.3.sa.heads.2.query.weight
+blocks.3.sa.heads.2.value.weight
+blocks.3.sa.heads.3.tril
+blocks.3.sa.heads.3.key.weight
+blocks.3.sa.heads.3.query.weight
+blocks.3.sa.heads.3.value.weight
+blocks.3.sa.heads.4.tril
+blocks.3.sa.heads.4.key.weight
+blocks.3.sa.heads.4.query.weight
+blocks.3.sa.heads.4.value.weight
+blocks.3.sa.heads.5.tril
+blocks.3.sa.heads.5.key.weight
+blocks.3.sa.heads.5.query.weight
+blocks.3.sa.heads.5.value.weight
+blocks.3.sa.proj.weight
+blocks.3.sa.proj.bias
+blocks.3.ffwd.net.0.weight
+blocks.3.ffwd.net.0.bias
+blocks.3.ffwd.net.2.weight
+blocks.3.ffwd.net.2.bias
+blocks.3.ln1.weight
+blocks.3.ln1.bias
+blocks.3.ln2.weight
+blocks.3.ln2.bias
+blocks.4.sa.heads.0.tril
+blocks.4.sa.heads.0.key.weight
+blocks.4.sa.heads.0.query.weight
+blocks.4.sa.heads.0.value.weight
+blocks.4.sa.heads.1.tril
+blocks.4.sa.heads.1.key.weight
+blocks.4.sa.heads.1.query.weight
+blocks.4.sa.heads.1.value.weight
+blocks.4.sa.heads.2.tril
+blocks.4.sa.heads.2.key.weight
+blocks.4.sa.heads.2.query.weight
+blocks.4.sa.heads.2.value.weight
+blocks.4.sa.heads.3.tril
+blocks.4.sa.heads.3.key.weight
+blocks.4.sa.heads.3.query.weight
+blocks.4.sa.heads.3.value.weight
+blocks.4.sa.heads.4.tril
+blocks.4.sa.heads.4.key.weight
+blocks.4.sa.heads.4.query.weight
+blocks.4.sa.heads.4.value.weight
+blocks.4.sa.heads.5.tril
+blocks.4.sa.heads.5.key.weight
+blocks.4.sa.heads.5.query.weight
+blocks.4.sa.heads.5.value.weight
+blocks.4.sa.proj.weight
+blocks.4.sa.proj.bias
+blocks.4.ffwd.net.0.weight
+blocks.4.ffwd.net.0.bias
+blocks.4.ffwd.net.2.weight
+blocks.4.ffwd.net.2.bias
+blocks.4.ln1.weight
+blocks.4.ln1.bias
+blocks.4.ln2.weight
+blocks.4.ln2.bias
+blocks.5.sa.heads.0.tril
+blocks.5.sa.heads.0.key.weight
+blocks.5.sa.heads.0.query.weight
+blocks.5.sa.heads.0.value.weight
+blocks.5.sa.heads.1.tril
+blocks.5.sa.heads.1.key.weight
+blocks.5.sa.heads.1.query.weight
+blocks.5.sa.heads.1.value.weight
+blocks.5.sa.heads.2.tril
+blocks.5.sa.heads.2.key.weight
+blocks.5.sa.heads.2.query.weight
+blocks.5.sa.heads.2.value.weight
+blocks.5.sa.heads.3.tril
+blocks.5.sa.heads.3.key.weight
+blocks.5.sa.heads.3.query.weight
+blocks.5.sa.heads.3.value.weight
+blocks.5.sa.heads.4.tril
+blocks.5.sa.heads.4.key.weight
+blocks.5.sa.heads.4.query.weight
+blocks.5.sa.heads.4.value.weight
+blocks.5.sa.heads.5.tril
+blocks.5.sa.heads.5.key.weight
+blocks.5.sa.heads.5.query.weight
+blocks.5.sa.heads.5.value.weight
+blocks.5.sa.proj.weight
+blocks.5.sa.proj.bias
+blocks.5.ffwd.net.0.weight
+blocks.5.ffwd.net.0.bias
+blocks.5.ffwd.net.2.weight
+blocks.5.ffwd.net.2.bias
+blocks.5.ln1.weight
+blocks.5.ln1.bias
+blocks.5.ln2.weight
+blocks.5.ln2.bias
+ln_f.weight
+ln_f.bias
+lm_head.weight
+lm_head.bias
+Shapes of tensors in model_state_dict:
+token_embedding_table.weight: torch.Size([65, 384])
+token_embedding_table.weight: shape=torch.Size([65, 384]), size=99840 bytes
+position_embedding_table.weight: torch.Size([256, 384])
+position_embedding_table.weight: shape=torch.Size([256, 384]), size=393216 bytes
+blocks.0.sa.heads.0.tril: torch.Size([256, 256])
+blocks.0.sa.heads.0.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.0.sa.heads.0.key.weight: torch.Size([64, 384])
+blocks.0.sa.heads.0.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.0.sa.heads.0.query.weight: torch.Size([64, 384])
+blocks.0.sa.heads.0.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.0.sa.heads.0.value.weight: torch.Size([64, 384])
+blocks.0.sa.heads.0.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.0.sa.heads.1.tril: torch.Size([256, 256])
+blocks.0.sa.heads.1.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.0.sa.heads.1.key.weight: torch.Size([64, 384])
+blocks.0.sa.heads.1.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.0.sa.heads.1.query.weight: torch.Size([64, 384])
+blocks.0.sa.heads.1.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.0.sa.heads.1.value.weight: torch.Size([64, 384])
+blocks.0.sa.heads.1.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.0.sa.heads.2.tril: torch.Size([256, 256])
+blocks.0.sa.heads.2.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.0.sa.heads.2.key.weight: torch.Size([64, 384])
+blocks.0.sa.heads.2.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.0.sa.heads.2.query.weight: torch.Size([64, 384])
+blocks.0.sa.heads.2.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.0.sa.heads.2.value.weight: torch.Size([64, 384])
+blocks.0.sa.heads.2.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.0.sa.heads.3.tril: torch.Size([256, 256])
+blocks.0.sa.heads.3.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.0.sa.heads.3.key.weight: torch.Size([64, 384])
+blocks.0.sa.heads.3.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.0.sa.heads.3.query.weight: torch.Size([64, 384])
+blocks.0.sa.heads.3.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.0.sa.heads.3.value.weight: torch.Size([64, 384])
+blocks.0.sa.heads.3.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.0.sa.heads.4.tril: torch.Size([256, 256])
+blocks.0.sa.heads.4.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.0.sa.heads.4.key.weight: torch.Size([64, 384])
+blocks.0.sa.heads.4.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.0.sa.heads.4.query.weight: torch.Size([64, 384])
+blocks.0.sa.heads.4.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.0.sa.heads.4.value.weight: torch.Size([64, 384])
+blocks.0.sa.heads.4.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.0.sa.heads.5.tril: torch.Size([256, 256])
+blocks.0.sa.heads.5.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.0.sa.heads.5.key.weight: torch.Size([64, 384])
+blocks.0.sa.heads.5.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.0.sa.heads.5.query.weight: torch.Size([64, 384])
+blocks.0.sa.heads.5.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.0.sa.heads.5.value.weight: torch.Size([64, 384])
+blocks.0.sa.heads.5.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.0.sa.proj.weight: torch.Size([384, 384])
+blocks.0.sa.proj.weight: shape=torch.Size([384, 384]), size=589824 bytes
+blocks.0.sa.proj.bias: torch.Size([384])
+blocks.0.sa.proj.bias: shape=torch.Size([384]), size=1536 bytes
+blocks.0.ffwd.net.0.weight: torch.Size([1536, 384])
+blocks.0.ffwd.net.0.weight: shape=torch.Size([1536, 384]), size=2359296 bytes
+blocks.0.ffwd.net.0.bias: torch.Size([1536])
+blocks.0.ffwd.net.0.bias: shape=torch.Size([1536]), size=6144 bytes
+blocks.0.ffwd.net.2.weight: torch.Size([384, 1536])
+blocks.0.ffwd.net.2.weight: shape=torch.Size([384, 1536]), size=2359296 bytes
+blocks.0.ffwd.net.2.bias: torch.Size([384])
+blocks.0.ffwd.net.2.bias: shape=torch.Size([384]), size=1536 bytes
+blocks.0.ln1.weight: torch.Size([384])
+blocks.0.ln1.weight: shape=torch.Size([384]), size=1536 bytes
+blocks.0.ln1.bias: torch.Size([384])
+blocks.0.ln1.bias: shape=torch.Size([384]), size=1536 bytes
+blocks.0.ln2.weight: torch.Size([384])
+blocks.0.ln2.weight: shape=torch.Size([384]), size=1536 bytes
+blocks.0.ln2.bias: torch.Size([384])
+blocks.0.ln2.bias: shape=torch.Size([384]), size=1536 bytes
+blocks.1.sa.heads.0.tril: torch.Size([256, 256])
+blocks.1.sa.heads.0.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.1.sa.heads.0.key.weight: torch.Size([64, 384])
+blocks.1.sa.heads.0.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.1.sa.heads.0.query.weight: torch.Size([64, 384])
+blocks.1.sa.heads.0.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.1.sa.heads.0.value.weight: torch.Size([64, 384])
+blocks.1.sa.heads.0.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.1.sa.heads.1.tril: torch.Size([256, 256])
+blocks.1.sa.heads.1.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.1.sa.heads.1.key.weight: torch.Size([64, 384])
+blocks.1.sa.heads.1.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.1.sa.heads.1.query.weight: torch.Size([64, 384])
+blocks.1.sa.heads.1.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.1.sa.heads.1.value.weight: torch.Size([64, 384])
+blocks.1.sa.heads.1.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.1.sa.heads.2.tril: torch.Size([256, 256])
+blocks.1.sa.heads.2.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.1.sa.heads.2.key.weight: torch.Size([64, 384])
+blocks.1.sa.heads.2.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.1.sa.heads.2.query.weight: torch.Size([64, 384])
+blocks.1.sa.heads.2.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.1.sa.heads.2.value.weight: torch.Size([64, 384])
+blocks.1.sa.heads.2.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.1.sa.heads.3.tril: torch.Size([256, 256])
+blocks.1.sa.heads.3.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.1.sa.heads.3.key.weight: torch.Size([64, 384])
+blocks.1.sa.heads.3.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.1.sa.heads.3.query.weight: torch.Size([64, 384])
+blocks.1.sa.heads.3.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.1.sa.heads.3.value.weight: torch.Size([64, 384])
+blocks.1.sa.heads.3.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.1.sa.heads.4.tril: torch.Size([256, 256])
+blocks.1.sa.heads.4.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.1.sa.heads.4.key.weight: torch.Size([64, 384])
+blocks.1.sa.heads.4.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.1.sa.heads.4.query.weight: torch.Size([64, 384])
+blocks.1.sa.heads.4.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.1.sa.heads.4.value.weight: torch.Size([64, 384])
+blocks.1.sa.heads.4.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.1.sa.heads.5.tril: torch.Size([256, 256])
+blocks.1.sa.heads.5.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.1.sa.heads.5.key.weight: torch.Size([64, 384])
+blocks.1.sa.heads.5.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.1.sa.heads.5.query.weight: torch.Size([64, 384])
+blocks.1.sa.heads.5.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.1.sa.heads.5.value.weight: torch.Size([64, 384])
+blocks.1.sa.heads.5.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.1.sa.proj.weight: torch.Size([384, 384])
+blocks.1.sa.proj.weight: shape=torch.Size([384, 384]), size=589824 bytes
+blocks.1.sa.proj.bias: torch.Size([384])
+blocks.1.sa.proj.bias: shape=torch.Size([384]), size=1536 bytes
+blocks.1.ffwd.net.0.weight: torch.Size([1536, 384])
+blocks.1.ffwd.net.0.weight: shape=torch.Size([1536, 384]), size=2359296 bytes
+blocks.1.ffwd.net.0.bias: torch.Size([1536])
+blocks.1.ffwd.net.0.bias: shape=torch.Size([1536]), size=6144 bytes
+blocks.1.ffwd.net.2.weight: torch.Size([384, 1536])
+blocks.1.ffwd.net.2.weight: shape=torch.Size([384, 1536]), size=2359296 bytes
+blocks.1.ffwd.net.2.bias: torch.Size([384])
+blocks.1.ffwd.net.2.bias: shape=torch.Size([384]), size=1536 bytes
+blocks.1.ln1.weight: torch.Size([384])
+blocks.1.ln1.weight: shape=torch.Size([384]), size=1536 bytes
+blocks.1.ln1.bias: torch.Size([384])
+blocks.1.ln1.bias: shape=torch.Size([384]), size=1536 bytes
+blocks.1.ln2.weight: torch.Size([384])
+blocks.1.ln2.weight: shape=torch.Size([384]), size=1536 bytes
+blocks.1.ln2.bias: torch.Size([384])
+blocks.1.ln2.bias: shape=torch.Size([384]), size=1536 bytes
+blocks.2.sa.heads.0.tril: torch.Size([256, 256])
+blocks.2.sa.heads.0.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.2.sa.heads.0.key.weight: torch.Size([64, 384])
+blocks.2.sa.heads.0.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.2.sa.heads.0.query.weight: torch.Size([64, 384])
+blocks.2.sa.heads.0.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.2.sa.heads.0.value.weight: torch.Size([64, 384])
+blocks.2.sa.heads.0.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.2.sa.heads.1.tril: torch.Size([256, 256])
+blocks.2.sa.heads.1.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.2.sa.heads.1.key.weight: torch.Size([64, 384])
+blocks.2.sa.heads.1.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.2.sa.heads.1.query.weight: torch.Size([64, 384])
+blocks.2.sa.heads.1.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.2.sa.heads.1.value.weight: torch.Size([64, 384])
+blocks.2.sa.heads.1.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.2.sa.heads.2.tril: torch.Size([256, 256])
+blocks.2.sa.heads.2.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.2.sa.heads.2.key.weight: torch.Size([64, 384])
+blocks.2.sa.heads.2.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.2.sa.heads.2.query.weight: torch.Size([64, 384])
+blocks.2.sa.heads.2.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.2.sa.heads.2.value.weight: torch.Size([64, 384])
+blocks.2.sa.heads.2.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.2.sa.heads.3.tril: torch.Size([256, 256])
+blocks.2.sa.heads.3.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.2.sa.heads.3.key.weight: torch.Size([64, 384])
+blocks.2.sa.heads.3.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.2.sa.heads.3.query.weight: torch.Size([64, 384])
+blocks.2.sa.heads.3.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.2.sa.heads.3.value.weight: torch.Size([64, 384])
+blocks.2.sa.heads.3.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.2.sa.heads.4.tril: torch.Size([256, 256])
+blocks.2.sa.heads.4.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.2.sa.heads.4.key.weight: torch.Size([64, 384])
+blocks.2.sa.heads.4.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.2.sa.heads.4.query.weight: torch.Size([64, 384])
+blocks.2.sa.heads.4.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.2.sa.heads.4.value.weight: torch.Size([64, 384])
+blocks.2.sa.heads.4.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.2.sa.heads.5.tril: torch.Size([256, 256])
+blocks.2.sa.heads.5.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.2.sa.heads.5.key.weight: torch.Size([64, 384])
+blocks.2.sa.heads.5.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.2.sa.heads.5.query.weight: torch.Size([64, 384])
+blocks.2.sa.heads.5.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.2.sa.heads.5.value.weight: torch.Size([64, 384])
+blocks.2.sa.heads.5.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.2.sa.proj.weight: torch.Size([384, 384])
+blocks.2.sa.proj.weight: shape=torch.Size([384, 384]), size=589824 bytes
+blocks.2.sa.proj.bias: torch.Size([384])
+blocks.2.sa.proj.bias: shape=torch.Size([384]), size=1536 bytes
+blocks.2.ffwd.net.0.weight: torch.Size([1536, 384])
+blocks.2.ffwd.net.0.weight: shape=torch.Size([1536, 384]), size=2359296 bytes
+blocks.2.ffwd.net.0.bias: torch.Size([1536])
+blocks.2.ffwd.net.0.bias: shape=torch.Size([1536]), size=6144 bytes
+blocks.2.ffwd.net.2.weight: torch.Size([384, 1536])
+blocks.2.ffwd.net.2.weight: shape=torch.Size([384, 1536]), size=2359296 bytes
+blocks.2.ffwd.net.2.bias: torch.Size([384])
+blocks.2.ffwd.net.2.bias: shape=torch.Size([384]), size=1536 bytes
+blocks.2.ln1.weight: torch.Size([384])
+blocks.2.ln1.weight: shape=torch.Size([384]), size=1536 bytes
+blocks.2.ln1.bias: torch.Size([384])
+blocks.2.ln1.bias: shape=torch.Size([384]), size=1536 bytes
+blocks.2.ln2.weight: torch.Size([384])
+blocks.2.ln2.weight: shape=torch.Size([384]), size=1536 bytes
+blocks.2.ln2.bias: torch.Size([384])
+blocks.2.ln2.bias: shape=torch.Size([384]), size=1536 bytes
+blocks.3.sa.heads.0.tril: torch.Size([256, 256])
+blocks.3.sa.heads.0.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.3.sa.heads.0.key.weight: torch.Size([64, 384])
+blocks.3.sa.heads.0.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.3.sa.heads.0.query.weight: torch.Size([64, 384])
+blocks.3.sa.heads.0.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.3.sa.heads.0.value.weight: torch.Size([64, 384])
+blocks.3.sa.heads.0.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.3.sa.heads.1.tril: torch.Size([256, 256])
+blocks.3.sa.heads.1.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.3.sa.heads.1.key.weight: torch.Size([64, 384])
+blocks.3.sa.heads.1.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.3.sa.heads.1.query.weight: torch.Size([64, 384])
+blocks.3.sa.heads.1.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.3.sa.heads.1.value.weight: torch.Size([64, 384])
+blocks.3.sa.heads.1.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.3.sa.heads.2.tril: torch.Size([256, 256])
+blocks.3.sa.heads.2.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.3.sa.heads.2.key.weight: torch.Size([64, 384])
+blocks.3.sa.heads.2.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.3.sa.heads.2.query.weight: torch.Size([64, 384])
+blocks.3.sa.heads.2.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.3.sa.heads.2.value.weight: torch.Size([64, 384])
+blocks.3.sa.heads.2.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.3.sa.heads.3.tril: torch.Size([256, 256])
+blocks.3.sa.heads.3.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.3.sa.heads.3.key.weight: torch.Size([64, 384])
+blocks.3.sa.heads.3.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.3.sa.heads.3.query.weight: torch.Size([64, 384])
+blocks.3.sa.heads.3.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.3.sa.heads.3.value.weight: torch.Size([64, 384])
+blocks.3.sa.heads.3.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.3.sa.heads.4.tril: torch.Size([256, 256])
+blocks.3.sa.heads.4.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.3.sa.heads.4.key.weight: torch.Size([64, 384])
+blocks.3.sa.heads.4.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.3.sa.heads.4.query.weight: torch.Size([64, 384])
+blocks.3.sa.heads.4.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.3.sa.heads.4.value.weight: torch.Size([64, 384])
+blocks.3.sa.heads.4.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.3.sa.heads.5.tril: torch.Size([256, 256])
+blocks.3.sa.heads.5.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.3.sa.heads.5.key.weight: torch.Size([64, 384])
+blocks.3.sa.heads.5.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.3.sa.heads.5.query.weight: torch.Size([64, 384])
+blocks.3.sa.heads.5.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.3.sa.heads.5.value.weight: torch.Size([64, 384])
+blocks.3.sa.heads.5.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.3.sa.proj.weight: torch.Size([384, 384])
+blocks.3.sa.proj.weight: shape=torch.Size([384, 384]), size=589824 bytes
+blocks.3.sa.proj.bias: torch.Size([384])
+blocks.3.sa.proj.bias: shape=torch.Size([384]), size=1536 bytes
+blocks.3.ffwd.net.0.weight: torch.Size([1536, 384])
+blocks.3.ffwd.net.0.weight: shape=torch.Size([1536, 384]), size=2359296 bytes
+blocks.3.ffwd.net.0.bias: torch.Size([1536])
+blocks.3.ffwd.net.0.bias: shape=torch.Size([1536]), size=6144 bytes
+blocks.3.ffwd.net.2.weight: torch.Size([384, 1536])
+blocks.3.ffwd.net.2.weight: shape=torch.Size([384, 1536]), size=2359296 bytes
+blocks.3.ffwd.net.2.bias: torch.Size([384])
+blocks.3.ffwd.net.2.bias: shape=torch.Size([384]), size=1536 bytes
+blocks.3.ln1.weight: torch.Size([384])
+blocks.3.ln1.weight: shape=torch.Size([384]), size=1536 bytes
+blocks.3.ln1.bias: torch.Size([384])
+blocks.3.ln1.bias: shape=torch.Size([384]), size=1536 bytes
+blocks.3.ln2.weight: torch.Size([384])
+blocks.3.ln2.weight: shape=torch.Size([384]), size=1536 bytes
+blocks.3.ln2.bias: torch.Size([384])
+blocks.3.ln2.bias: shape=torch.Size([384]), size=1536 bytes
+blocks.4.sa.heads.0.tril: torch.Size([256, 256])
+blocks.4.sa.heads.0.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.4.sa.heads.0.key.weight: torch.Size([64, 384])
+blocks.4.sa.heads.0.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.4.sa.heads.0.query.weight: torch.Size([64, 384])
+blocks.4.sa.heads.0.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.4.sa.heads.0.value.weight: torch.Size([64, 384])
+blocks.4.sa.heads.0.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.4.sa.heads.1.tril: torch.Size([256, 256])
+blocks.4.sa.heads.1.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.4.sa.heads.1.key.weight: torch.Size([64, 384])
+blocks.4.sa.heads.1.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.4.sa.heads.1.query.weight: torch.Size([64, 384])
+blocks.4.sa.heads.1.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.4.sa.heads.1.value.weight: torch.Size([64, 384])
+blocks.4.sa.heads.1.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.4.sa.heads.2.tril: torch.Size([256, 256])
+blocks.4.sa.heads.2.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.4.sa.heads.2.key.weight: torch.Size([64, 384])
+blocks.4.sa.heads.2.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.4.sa.heads.2.query.weight: torch.Size([64, 384])
+blocks.4.sa.heads.2.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.4.sa.heads.2.value.weight: torch.Size([64, 384])
+blocks.4.sa.heads.2.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.4.sa.heads.3.tril: torch.Size([256, 256])
+blocks.4.sa.heads.3.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.4.sa.heads.3.key.weight: torch.Size([64, 384])
+blocks.4.sa.heads.3.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.4.sa.heads.3.query.weight: torch.Size([64, 384])
+blocks.4.sa.heads.3.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.4.sa.heads.3.value.weight: torch.Size([64, 384])
+blocks.4.sa.heads.3.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.4.sa.heads.4.tril: torch.Size([256, 256])
+blocks.4.sa.heads.4.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.4.sa.heads.4.key.weight: torch.Size([64, 384])
+blocks.4.sa.heads.4.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.4.sa.heads.4.query.weight: torch.Size([64, 384])
+blocks.4.sa.heads.4.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.4.sa.heads.4.value.weight: torch.Size([64, 384])
+blocks.4.sa.heads.4.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.4.sa.heads.5.tril: torch.Size([256, 256])
+blocks.4.sa.heads.5.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.4.sa.heads.5.key.weight: torch.Size([64, 384])
+blocks.4.sa.heads.5.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.4.sa.heads.5.query.weight: torch.Size([64, 384])
+blocks.4.sa.heads.5.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.4.sa.heads.5.value.weight: torch.Size([64, 384])
+blocks.4.sa.heads.5.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.4.sa.proj.weight: torch.Size([384, 384])
+blocks.4.sa.proj.weight: shape=torch.Size([384, 384]), size=589824 bytes
+blocks.4.sa.proj.bias: torch.Size([384])
+blocks.4.sa.proj.bias: shape=torch.Size([384]), size=1536 bytes
+blocks.4.ffwd.net.0.weight: torch.Size([1536, 384])
+blocks.4.ffwd.net.0.weight: shape=torch.Size([1536, 384]), size=2359296 bytes
+blocks.4.ffwd.net.0.bias: torch.Size([1536])
+blocks.4.ffwd.net.0.bias: shape=torch.Size([1536]), size=6144 bytes
+blocks.4.ffwd.net.2.weight: torch.Size([384, 1536])
+blocks.4.ffwd.net.2.weight: shape=torch.Size([384, 1536]), size=2359296 bytes
+blocks.4.ffwd.net.2.bias: torch.Size([384])
+blocks.4.ffwd.net.2.bias: shape=torch.Size([384]), size=1536 bytes
+blocks.4.ln1.weight: torch.Size([384])
+blocks.4.ln1.weight: shape=torch.Size([384]), size=1536 bytes
+blocks.4.ln1.bias: torch.Size([384])
+blocks.4.ln1.bias: shape=torch.Size([384]), size=1536 bytes
+blocks.4.ln2.weight: torch.Size([384])
+blocks.4.ln2.weight: shape=torch.Size([384]), size=1536 bytes
+blocks.4.ln2.bias: torch.Size([384])
+blocks.4.ln2.bias: shape=torch.Size([384]), size=1536 bytes
+blocks.5.sa.heads.0.tril: torch.Size([256, 256])
+blocks.5.sa.heads.0.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.5.sa.heads.0.key.weight: torch.Size([64, 384])
+blocks.5.sa.heads.0.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.5.sa.heads.0.query.weight: torch.Size([64, 384])
+blocks.5.sa.heads.0.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.5.sa.heads.0.value.weight: torch.Size([64, 384])
+blocks.5.sa.heads.0.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.5.sa.heads.1.tril: torch.Size([256, 256])
+blocks.5.sa.heads.1.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.5.sa.heads.1.key.weight: torch.Size([64, 384])
+blocks.5.sa.heads.1.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.5.sa.heads.1.query.weight: torch.Size([64, 384])
+blocks.5.sa.heads.1.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.5.sa.heads.1.value.weight: torch.Size([64, 384])
+blocks.5.sa.heads.1.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.5.sa.heads.2.tril: torch.Size([256, 256])
+blocks.5.sa.heads.2.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.5.sa.heads.2.key.weight: torch.Size([64, 384])
+blocks.5.sa.heads.2.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.5.sa.heads.2.query.weight: torch.Size([64, 384])
+blocks.5.sa.heads.2.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.5.sa.heads.2.value.weight: torch.Size([64, 384])
+blocks.5.sa.heads.2.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.5.sa.heads.3.tril: torch.Size([256, 256])
+blocks.5.sa.heads.3.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.5.sa.heads.3.key.weight: torch.Size([64, 384])
+blocks.5.sa.heads.3.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.5.sa.heads.3.query.weight: torch.Size([64, 384])
+blocks.5.sa.heads.3.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.5.sa.heads.3.value.weight: torch.Size([64, 384])
+blocks.5.sa.heads.3.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.5.sa.heads.4.tril: torch.Size([256, 256])
+blocks.5.sa.heads.4.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.5.sa.heads.4.key.weight: torch.Size([64, 384])
+blocks.5.sa.heads.4.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.5.sa.heads.4.query.weight: torch.Size([64, 384])
+blocks.5.sa.heads.4.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.5.sa.heads.4.value.weight: torch.Size([64, 384])
+blocks.5.sa.heads.4.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.5.sa.heads.5.tril: torch.Size([256, 256])
+blocks.5.sa.heads.5.tril: shape=torch.Size([256, 256]), size=262144 bytes
+blocks.5.sa.heads.5.key.weight: torch.Size([64, 384])
+blocks.5.sa.heads.5.key.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.5.sa.heads.5.query.weight: torch.Size([64, 384])
+blocks.5.sa.heads.5.query.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.5.sa.heads.5.value.weight: torch.Size([64, 384])
+blocks.5.sa.heads.5.value.weight: shape=torch.Size([64, 384]), size=98304 bytes
+blocks.5.sa.proj.weight: torch.Size([384, 384])
+blocks.5.sa.proj.weight: shape=torch.Size([384, 384]), size=589824 bytes
+blocks.5.sa.proj.bias: torch.Size([384])
+blocks.5.sa.proj.bias: shape=torch.Size([384]), size=1536 bytes
+blocks.5.ffwd.net.0.weight: torch.Size([1536, 384])
+blocks.5.ffwd.net.0.weight: shape=torch.Size([1536, 384]), size=2359296 bytes
+blocks.5.ffwd.net.0.bias: torch.Size([1536])
+blocks.5.ffwd.net.0.bias: shape=torch.Size([1536]), size=6144 bytes
+blocks.5.ffwd.net.2.weight: torch.Size([384, 1536])
+blocks.5.ffwd.net.2.weight: shape=torch.Size([384, 1536]), size=2359296 bytes
+blocks.5.ffwd.net.2.bias: torch.Size([384])
+blocks.5.ffwd.net.2.bias: shape=torch.Size([384]), size=1536 bytes
+blocks.5.ln1.weight: torch.Size([384])
+blocks.5.ln1.weight: shape=torch.Size([384]), size=1536 bytes
+blocks.5.ln1.bias: torch.Size([384])
+blocks.5.ln1.bias: shape=torch.Size([384]), size=1536 bytes
+blocks.5.ln2.weight: torch.Size([384])
+blocks.5.ln2.weight: shape=torch.Size([384]), size=1536 bytes
+blocks.5.ln2.bias: torch.Size([384])
+blocks.5.ln2.bias: shape=torch.Size([384]), size=1536 bytes
+ln_f.weight: torch.Size([384])
+ln_f.weight: shape=torch.Size([384]), size=1536 bytes
+ln_f.bias: torch.Size([384])
+ln_f.bias: shape=torch.Size([384]), size=1536 bytes
+lm_head.weight: torch.Size([65, 384])
+lm_head.weight: shape=torch.Size([65, 384]), size=99840 bytes
+lm_head.bias: torch.Size([65])
+lm_head.bias: shape=torch.Size([65]), size=260 bytes
+Total size of all tensors: 50.16 MB
+
+And goes ere no power of our back? art thou not stand?
+Poor and loising knew not of love's music scarce?
+If thou wilt eet York, I will unto thy stand:
+And, what what my tongue did still ride,
+Thou didst bebbraw the return blood of thee
+To bear asleep king 
+inftime=5.395769357681274  BS=1 ins=0 token=256 sigmem=1.8414860286749508 totmem=2.0278646884737217
+

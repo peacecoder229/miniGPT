@@ -8,11 +8,13 @@ device_type_values=("gpu")
 #ins_values=({0..2} {0..4} {0..6})
 #declare -A ins_values=(["64"]=2 ) 
 #declare -A ins_values=(["64"]=2 ["32"]=4 ["16"]=8) 
+#declare -A ins_values=(["64"]=2 ["16"]=8) 
 declare -A ins_values=(["64"]=2) 
 #ins_values=(4 8)
 #bs_values=(64)
 #bs_values=(1 16 32 64 128 256)
-bs_values=(1)
+#bs_values=(1 128)
+bs_values=(1 4 16)
 rm -f tmp_util
 #declare -a pids
 i=0  #track odd instnaces 
@@ -109,6 +111,7 @@ for token in "${TOKENS[@]}" ; do
 		  fi
 		else
 		  d=$(( ins*intrathread ))
+		  #s=$(( 64+d ))
 		  s=$(( 64+d ))
 		fi
 
@@ -124,10 +127,12 @@ for token in "${TOKENS[@]}" ; do
 			cmd="OMP_NUM_THREADS=$intrathread numactl -C ${s}-${e}  python run_generation.py --insid $ins --benchmark -m  meta-llama/Llama-2-${model}-hf --dtype bfloat16 --num-iter 1 --batch-size $bs --input-tokens 612  --max_new_tokens $token --ipex --jit --prof"
 		elif [ "$IPEX" == "true" ]; then
 			echo "Only IPEX is true."
-			cmd="OMP_NUM_THREADS=$intrathread numactl -C ${s}-${e}  python run_generation.py --insid $ins --benchmark -m  meta-llama/Llama-2-${model}-hf --dtype bfloat16 --num-iter 1 --batch-size $bs --input-tokens 612  --max_new_tokens $token --ipex --jit"
+			cmd="numactl -C ${s}-${e} python gpt_inf.py --device_type $device_type  --bs $bs --insid $ins --intrathread $intrathread --maxnewtoken $token --model ${model} --ipex"
+			#cmd="OMP_NUM_THREADS=$intrathread numactl -C ${s}-${e}  python run_generation.py --insid $ins --benchmark -m  meta-llama/Llama-2-${model}-hf --dtype bfloat16 --num-iter 1 --batch-size $bs --input-tokens 612  --max_new_tokens $token --ipex --jit"
 		elif [ "$PROF" == "true" ]; then
 			echo "Only PROF is true."
-			cmd="OMP_NUM_THREADS=$intrathread numactl -C ${s}-${e}  python run_generation.py --insid $ins --benchmark -m  meta-llama/Llama-2-${model}-hf --dtype bfloat16 --num-iter 1 --batch-size $bs --input-tokens 612  --max_new_tokens $token --prof"
+			cmd="numactl -C ${s}-${e} python gpt_inf.py --device_type $device_type  --bs $bs --insid $ins --intrathread $intrathread --maxnewtoken $token --model ${model} --prof"
+			#cmd="OMP_NUM_THREADS=$intrathread numactl -C ${s}-${e}  python run_generation.py --insid $ins --benchmark -m  meta-llama/Llama-2-${model}-hf --dtype bfloat16 --num-iter 1 --batch-size $bs --input-tokens 612  --max_new_tokens $token --prof"
 
 		else
 			echo "Default case."
@@ -220,9 +225,9 @@ for token in "${TOKENS[@]}" ; do
 
       res+=", $TAG"
 
-      touch cpulog_${TAG}
-      touch gpulog_${TAG}
-      touch gpuutil_${TAG}
+      touch cpulog_${TAG}.txt
+      touch gpulog_${TAG}.txt
+      touch gpuutil_${TAG}.txt
 
       if [ "$device_type" = "cpu" ]; then
 	      inscnt=$(( ins+1 ))
@@ -237,8 +242,8 @@ for token in "${TOKENS[@]}" ; do
       # Wait for all jobs to finish before moving to the next bs value
 
       #pkill -f print_gpu_util_stats.py
-     
-     sleep 2
+    #sleep 2 
+     sleep 60
      #echo "$intrathread,$device_type,$ins,$bs,${pids[-1]},$mininfT,$maxinfT,$avginfT,$gpuutilavg,$gpuutilmax,$memutilavg,$memutilmax," >> result_sum.txt
       # Clear the PID array for the next loop iteration
     done  # for maxins

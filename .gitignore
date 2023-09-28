@@ -1,8 +1,12 @@
 # Ignore text files
 *.txt
+*.png
+*_test
 
 # Ignore directories
 results/
+backup/
+trace_result/
 Log/
 checkpoints/
 split_temp_dir/

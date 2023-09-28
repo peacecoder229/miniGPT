@@ -4,7 +4,7 @@ import pandas as pd
 
 def process_line(line, printraw):
     #print(line)
-    parts = [part for part in line.strip().split(',') if part and part != "new"]
+    parts = [part for part in line.strip().split(',') if part]
     common_elements = parts[:9]
 
     first_instance = parts[9]
@@ -27,6 +27,7 @@ def process_line(line, printraw):
 
 def extract_value(instance, key):
     for item in instance.split():
+        #print(item)
         k, v = item.split('=')
         if k == key:
             return v

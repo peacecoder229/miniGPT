@@ -14,3 +14,7 @@ CMDhistory
 numactl -C 64-127 python gpt_inf.py --device_type gpu --bs 36 --insid 0 --intrathread 64 --maxnewtoken 500 --model 10m --bs 64
 ./intel_ipx_llama2_sweep.sh --model "150m" --newtoken [64]
 nvidia-smi dmon -s putc  // cmd to avoid H100 going into a hang
+profiling
+numactl -C 64-127 python gpt_inf.py --device_type cpu --bs 1 --insid 1 --intrathread 64 --maxnewtoken 64 --model 150m --prof
+CMD to plot mem and QPS of mniGPT
+./plot_charts_multifile_multixaxis_v2.py --metric-to-plot memory --group_by model,instanceCnt,BS --chart-type bar --files Avg,Peak --outfile nanoGPT_qps_memUse.png --sec_plot Throughput --sec_plot_type symbol --config /home/rdas/PT_fresh/intel-llm-scripts/result_dir/gpu_mem_qps --applynumericsort
